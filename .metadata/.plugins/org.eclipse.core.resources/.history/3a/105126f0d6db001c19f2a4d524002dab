@@ -1,0 +1,5 @@
+package com.agrogram.domain;
+
+public class TipoUsuario {
+
+}

@@ -1,0 +1,30 @@
+package com.agrogram.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.agrogram.dto.ProductosDTO;
+import com.agrogram.services.ProductoService;
+
+@RestController
+@RequestMapping("api/productos")
+@CrossOrigin("*")
+public class ProductoRestController {
+
+	@Autowired
+	private ProductoService productoService;
+	
+	@PostMapping("/addProducto")
+	public ResponseEntity<?> addProducto(@RequestBody ProductosDTO productosDTO){
+		try {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

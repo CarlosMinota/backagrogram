@@ -1,0 +1,26 @@
+package com.agrogram.services;
+
+import java.sql.SQLException;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
+
+import com.agrogram.dto.UsuarioDTO;
+
+@Service
+@Scope("singleton")
+public class UsuarioServiceImp implements UsuarioService{
+
+	@Override
+	public UsuarioDTO addUsuario(UsuarioDTO usuarioDTO) throws SQLException {
+		
+		return null;
+	}
+
+	@Override
+	public UsuarioDTO editarUsuario(UsuarioDTO usuarioDTO) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

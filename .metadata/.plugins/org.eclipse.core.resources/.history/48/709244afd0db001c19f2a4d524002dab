@@ -1,0 +1,7 @@
+package com.agrogram.domain;
+
+import java.io.Serializable;
+
+public class Usuario implements Serializable{
+
+}

@@ -1,0 +1,14 @@
+package com.agrogram.mappers;
+
+import org.mapstruct.Mapper;
+
+import com.agrogram.domain.Productos;
+import com.agrogram.dto.ProductosDTO;
+
+@Mapper(componentModel = "spring")
+public interface ProductosMapper {
+
+	public Productos productoDTOToProductos(ProductosDTO productoDTO);
+	
+	public ProductosDTO productoToProductosDTO(Productos producto);
+}

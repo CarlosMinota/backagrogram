@@ -1,0 +1,7 @@
+package com.agrogram.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TipoProductoRepository extends JpaRepository<T, ID>{
+
+}

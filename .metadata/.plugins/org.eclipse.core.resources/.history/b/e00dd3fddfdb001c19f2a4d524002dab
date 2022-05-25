@@ -1,0 +1,14 @@
+package com.agrogram.mappers;
+
+import org.mapstruct.Mapper;
+
+import com.agrogram.domain.Usuario;
+import com.agrogram.dto.UsuarioDTO;
+
+@Mapper(componentModel = "spring")
+public interface UsuarioMapper {
+
+	public Usuario usuarioDTOToUsuario(UsuarioDTO usuarioDTO);
+	
+	public UsuarioDTO usuarioToUsuarioDTO(Usuario usuario);
+}

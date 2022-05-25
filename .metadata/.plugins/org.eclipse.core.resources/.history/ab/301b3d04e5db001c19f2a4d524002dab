@@ -1,0 +1,5 @@
+package com.agrogram.repository;
+
+public interface PorductosRepository {
+
+}

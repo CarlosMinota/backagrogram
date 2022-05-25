@@ -1,0 +1,52 @@
+package com.agrogram.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
+
+import com.agrogram.domain.Productos;
+import com.agrogram.domain.Usuario;
+import com.agrogram.dto.ProductosDTO;
+import com.agrogram.repository.ProductosRepository;
+import com.agrogram.repository.UsuarioRepository;
+
+@Service
+@Scope("singleton")
+public class ProductoServiceImp implements ProductoService{
+	
+	@Autowired
+	private ProductosRepository productosRepository;
+	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
+	@Override
+	public ProductosDTO addProducto(ProductosDTO productosDTO) {
+		
+		Productos productos = new Productos();
+		Usuario usuario = null;
+		
+		productos.setNombreProdcuto(productosDTO.getNombreProdcuto());
+		productos.setDescripcion(productosDTO.getDescripcion());
+		productos.setFechaLanzamiento(productosDTO.getFechaLanzamiento());
+		productos.setCantidadProducto(productosDTO.getCantidadProducto());
+		productos.setValorProducto(productosDTO.getValorProducto());
+		productos.setArancelProducto(productosDTO.getArancelProducto());
+		usuario = usuarioRepository.findByIdUsuario(productosDTO.getIdUsuario());
+		
+		return productosDTO;
+	}
+
+	@Override
+	public ProductosDTO updateProducto(ProductosDTO productosDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void eliminarProducto(Integer idProducto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

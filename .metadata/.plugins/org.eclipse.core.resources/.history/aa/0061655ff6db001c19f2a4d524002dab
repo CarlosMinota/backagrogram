@@ -1,0 +1,12 @@
+package com.agrogram.services;
+
+import com.agrogram.dto.ProductosDTO;
+
+public interface ProductoService {
+
+	public ProductosDTO addProducto(ProductosDTO productosDTO);
+	
+	public ProductosDTO updateProducto(ProductosDTO productosDTO);
+	
+	public void eliminarProducto(Integer id);
+}
